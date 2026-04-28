@@ -1,0 +1,27 @@
+# Backend Ignores
+target/
+.classpath
+.project
+.settings/
+*.jks
+*.log
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+
+# Secrets
+src/main/resources/application.properties

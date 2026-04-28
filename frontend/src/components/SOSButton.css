@@ -1,0 +1,90 @@
+.sos-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 68, 68, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.sos-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(255, 68, 68, 0.6);
+}
+
+.sos-button:active {
+  transform: scale(0.95);
+}
+
+.sos-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.sos-text {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.sos-circles {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.circle {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-1 {
+  width: 10px;
+  height: 10px;
+}
+
+.circle-2 {
+  width: 20px;
+  height: 20px;
+  animation: pulse-ring 1.5s ease-in-out infinite;
+}
+
+.circle-3 {
+  width: 30px;
+  height: 30px;
+  animation: pulse-ring 1.5s ease-in-out 0.3s infinite;
+}
+
+.sos-button.pulse .circle-2 {
+  animation: pulse-ring 0.8s ease-in-out infinite;
+}
+
+.sos-button.pulse .circle-3 {
+  animation: pulse-ring 0.8s ease-in-out 0.15s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
